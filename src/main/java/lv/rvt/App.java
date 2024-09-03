@@ -7,7 +7,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("Hello world!");
+        //My code starts here
+        String name = "Nikita";
+        int age = 17;
+        boolean isOnline = false;
+        System.out.println(age);
+        //Code ends
     }
 
 }
