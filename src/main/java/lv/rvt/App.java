@@ -8,13 +8,19 @@ public class App
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give a number: ");
-        int number = Integer.valueOf(scanner.nextLine());
-        printUntilNumber(number);
+        
+        int number1 = Integer.valueOf(scanner.nextLine());
+        
+        int number2 = Integer.valueOf(scanner.nextLine());
+        divisibleByThreeInRange(number1,number2);
     }
-    public static void printUntilNumber(int number) {
-        for (int i = 1; i < number+1; i++) {
-            System.out.println(i);
+    public static void divisibleByThreeInRange(int number1, int number2) {
+        for (int i = number1-1; i < number2+1; i++) {
+            if (i%3==0) {
+                System.out.println(i);
+                
+            }
+            
         }
     }      
 }
