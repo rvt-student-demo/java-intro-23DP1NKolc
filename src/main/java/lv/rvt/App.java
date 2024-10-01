@@ -7,15 +7,41 @@ public class App
 {
     public static void main(String[] args) 
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Last number? ");
-        int number = Integer.valueOf(scanner.nextLine());
-        int i=1;
-        int result=0;
-        while(i!=(number+1)){
-            result = result + i;
-            i++;
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Give numbers: ");
+        int sum = 0;
+        int CountNumbers = 0;
+        int Videjais = 0;
+        int odd = 0;
+        int even =0;
+
+        while (true) {
+            int input = Integer.valueOf(reader.nextLine());
+
+            
+            if (input < 0) {
+                System.out.print("Thx! Bye!");
+                break;
+                
+            }
+
+            sum += input;
+            CountNumbers++;
+            Videjais=sum/CountNumbers;
+            if(input%2==0){
+                even++;
+            }
+            else{
+                odd++;
+            }
         }
-        System.out.println("The sum is: "+result); 
-    }
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Numbers: " + CountNumbers);
+        System.out.println("Average: " + Videjais);
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
+
+}
 }
