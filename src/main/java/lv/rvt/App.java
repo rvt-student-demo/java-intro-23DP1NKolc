@@ -5,43 +5,16 @@ import java.io.BufferedWriter;
 import java.util.Scanner;
 public class App
 {
-    public static void main(String[] args) 
-    {
-        Scanner reader = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Give numbers: ");
-        int sum = 0;
-        int CountNumbers = 0;
-        int Videjais = 0;
-        int odd = 0;
-        int even =0;
-
-        while (true) {
-            int input = Integer.valueOf(reader.nextLine());
-
-            
-            if (input < 0) {
-                System.out.print("Thx! Bye!");
-                break;
-                
-            }
-
-            sum += input;
-            CountNumbers++;
-            Videjais=sum/CountNumbers;
-            if(input%2==0){
-                even++;
-            }
-            else{
-                odd++;
-            }
+        System.out.println("Give a number: ");
+        int number = Integer.valueOf(scanner.nextLine());
+        printUntilNumber(number);
+    }
+    public static void printUntilNumber(int number) {
+        for (int i = 1; i < number+1; i++) {
+            System.out.println(i);
         }
-
-        System.out.println("Sum: " + sum);
-        System.out.println("Numbers: " + CountNumbers);
-        System.out.println("Average: " + Videjais);
-        System.out.println("Even: " + even);
-        System.out.println("Odd: " + odd);
-
-}
+    }      
 }
