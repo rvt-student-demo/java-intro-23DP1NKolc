@@ -5,95 +5,17 @@ import java.io.BufferedWriter;
 import java.util.Scanner;
 public class App
 {
-    public static void main(String[] args) {
+public static void main(String[] args) {
+    DecreasingCounter counter = new DecreasingCounter(100);
+
+    counter.printValue();
+
+        counter.reset();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
+    
         
-        printTriangleTwo(4);
-        christmasTree(4);
-        christmasTree(10);
-    }
-public static void printStars(int number) {
-    int i = 0;
-    while (i<number) {
-        System.out.print("*");
-        i++;
-        }
-        
-    }
-public static void printSpaces(int number) {
-    int i = 0;
-    while (i<number) {
-        System.out.print(" ");
-        i++;
-        }
-        
-    }
-public static void printSquare(int size) {
-    System.out.println();
-    int i = 0;
-    while (i<size) {
-        System.out.print("****");
-        System.out.println();
-        i++;
-    }
 }
-
-public static void printRectangle(int width, int height) {
-    System.out.println();    
-    int a = 1;
-    while(a-1<height){
-        int i = 0;
-        while (i<width) {
-            System.out.print("*");
-            i++;
-        }
-        System.out.println();
-        a++;
-    }              
-}
-
-public static void printTriangle(int size) {
-    System.out.println();
-    int i = 0;
-    while(i<size+1){
-        int a = 0;
-        while(a<i){
-            System.out.print("*");
-            a++;
-        }
-        System.out.println();
-        i++;       
-    }                
-}      
-public static void printTriangleTwo(int size) {
-    System.out.println();
-    for(int i =0; i<size;i++){
-        printSpaces(size-(i+1));
-        printStars(i+1);
-        System.out.println();
-
-
-    }            
-} 
-public static void christmasTree(int height) {
-    System.out.println();
-    for(int i =0; i<height;i++){
-        int a =1;
-        printSpaces(height-(i));
-        printStars(i+1);
-        if(i>0){
-            printStars(i);
-        }
-        
-        System.out.println();
-       
-
-
-    }
-            printSpaces(height-(1));
-            printStars(3);
-            System.out.println();
-            printSpaces(height-(1));
-            printStars(3);    
-            System.out.println();        
-}      
 }
