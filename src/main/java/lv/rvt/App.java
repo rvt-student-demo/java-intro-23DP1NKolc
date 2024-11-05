@@ -6,15 +6,16 @@ import java.util.Scanner;
 public class App
 {
 public static void main(String[] args) {
-    DecreasingCounter counter = new DecreasingCounter(100);
+    Scanner scanner = new Scanner(System.in);
+    Agent bond = new Agent("James", "Bond");
 
-    counter.printValue();
+    bond.toString(); // prints nothing
+    System.out.println(bond);
 
-        counter.reset();
-        counter.printValue();
+    Agent ionic = new Agent("Ionic", "Bond");
+    System.out.println(ionic);
 
-        counter.decrement();
-        counter.printValue();
+    
     
         
 }
