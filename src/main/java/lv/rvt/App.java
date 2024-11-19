@@ -10,12 +10,10 @@ import org.w3c.dom.css.Counter;
 public class App
 {
 public static void main(String[] args)  throws Exception {
-    Product tapeMeasure = new Product("Tape measure");
-Product plaster = new Product("Plaster", "home improvement section");
-Product tyre = new Product("Tyre", 5);
-
-System.out.println(tapeMeasure);
-System.out.println(plaster);
-System.out.println(tyre);
+    DecreasingCounter counter = new DecreasingCounter(1);
+    counter.increaseValue(2);
+    counter.increaseValue();
+    counter.increaseValue();
+    System.out.println(counter.getValue());
 }
 }

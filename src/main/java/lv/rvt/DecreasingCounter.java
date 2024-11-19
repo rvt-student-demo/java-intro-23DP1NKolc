@@ -11,12 +11,29 @@ public class DecreasingCounter {
         System.out.println("value: " + this.value);
     }
     public void reset() {
-        value=0;
+        this.value=0;
         }
-    
-    public void decrement() {
-        if(value>0){
-        value=value-1;
+    public void increaseValue() {
+        this.value+=1;
+        
+    }
+    public void decreaseValue() {
+        if(this.value>0){
+        this.value-=1;
         }
+    }
+    public void increaseValue(int increaseBy){
+            this.value+=increaseBy;
+    }
+    public void decreaseValue(int decreaseBy){
+        if((this.value-decreaseBy)>0){
+            this.value-=decreaseBy;
+        }
+        else{
+            this.value=0;
+        }
+    }
+    public int getValue() {
+        return value;
     }
 }
